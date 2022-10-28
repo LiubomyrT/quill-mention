@@ -33,7 +33,7 @@ class Mention {
       renderLoading() {
         return null;
       },
-      onSelect(item, insertItem) {
+      onSelect(item, insertItem, context) {
         insertItem(item);
       },
       mentionDenotationChars: ["@"],
@@ -266,13 +266,7 @@ class Mention {
     }
     this.options.onSelect(data, (asyncData) => {
       this.insertItem(asyncData);
-    }, () => {
-      this.quill.deleteText(
-        this.mentionCharPos + 1,
-        this.cursorPos - this.mentionCharPos,
-        Quill.sources.USER
-      );
-    });
+    }, this);
     this.hideMentionList();
   }
 
