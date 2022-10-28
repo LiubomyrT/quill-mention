@@ -269,7 +269,7 @@ class Mention {
     }, () => {
       this.quill.deleteText(
         this.mentionCharPos,
-        this.cursorPos - this.mentionCharPos,
+        this.cursorPos - this.mentionCharPos + 1,
         Quill.sources.USER
       );
     });
