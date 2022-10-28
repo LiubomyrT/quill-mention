@@ -39,7 +39,7 @@
     "start": "concurrently \"rollup -c -w\" \"serve docs\"",
     "build": "rollup -c",
     "test": "ava",
-    "postinstall": "cd ./node_modules/rollup-plugin-postcss && npm i && ../.. && npm run build"
+    "postinstall": "cd ./node_modules/quill-mention && npm i && cd ./node_modules/rollup-plugin-postcss && cd ../../ && npm run build"
   },
   "ava": {
     "require": [
