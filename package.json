@@ -38,8 +38,7 @@
   "scripts": {
     "start": "concurrently \"rollup -c -w\" \"serve docs\"",
     "build": "rollup -c",
-    "test": "ava",
-    "postinstall": "cd ./node_modules/rollup-plugin-postcss && npm i && cd ../../ && npm run build"
+    "test": "ava"
   },
   "ava": {
     "require": [
