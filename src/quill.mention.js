@@ -268,8 +268,8 @@ class Mention {
       this.insertItem(asyncData);
     }, () => {
       this.quill.deleteText(
-        this.mentionCharPos,
-        this.cursorPos - this.mentionCharPos + 1,
+        this.mentionCharPos + 1,
+        this.cursorPos - this.mentionCharPos,
         Quill.sources.USER
       );
     });
